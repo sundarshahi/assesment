@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="info_left">
+
+                <div class="basic_info">
+                        <button class="accordion"> 
+                            <span class="oval"><p class="num">1</p></span>
+                             Basic Informatio 
+                        </button>
+                        <div class="panel">
+                          <p>Lorem ipsum...</p>
+                        </div>
+                </div>
+                <div class="abt_exp"></div>
+                <div class="itineary"></div>
+
+            </div>
+
+            <div class="it_right">
+                <span class="title">ITINERARY</span>
+                <div class="day">
+                        <button class="accordion"> 
+                
+                                 Day 1 
+                            </button>
+                            <div class="panel">
+
+                                    <label for="titles">Give Title for the day:</label>
+                                    <label for="titles"style="margin-left: 435px">Approx time in Hr:</label>
+                                </br>
+                                    <input type="text" id="titles" name="title_day" placeholder="Title for the day.">
+                                    
+                                    <input type="text" id="titles" name="times" placeholder="hh-mm.">
+                                <br/>
+                                     <label for="titles">Give short discription:</label>
+                                     <br/>
+
+                                     <textarea class="txt" placeholder="Type here">
+                                                
+                                        </textarea>
+
+                                     <label>Facilites Provided For this day.</label><br/>
+                                     <label class="custom">Transport
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                          </label>
+                                          
+                                     <label class="custom">Breakfast
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                          </label>
+                                          
+                                          <label class="custom">Lunch
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                          </label>
+                                          
+                                          <label class="custom">Dinner
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                          </label>
+                                          <label class="custom">Accomodation
+                                                <input type="checkbox" checked="checked">
+                                                <span class="checkmark" checked="checked"></span>
+                                            </label></br/>
+
+                                            <button class="btn info">Add Another Day</button>
+                                            
+                            </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                      panel.style.maxHeight = null;
+                    } else {
+                      panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                  });
+                }
+
+                
+        </script>
+        <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+        <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+                
+
+    </body>
+
+</html>
+
